@@ -21,7 +21,7 @@ Vue.use(Navigator, { routes })
 Vue.use(Vuex, { myStore })
 
 // Uncommment the following to see NativeScript-Vue output logs
-// Vue.config.silent = false;
+Vue.config.silent = false;
 
 
 new Vue({

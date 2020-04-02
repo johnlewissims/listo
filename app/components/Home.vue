@@ -5,9 +5,10 @@
             <GridLayout class="home-2">
                 <ListView for="task in items" class="board">
                     <v-template>
-                        <StackLayout class="list-group-item">
+                        <FlexboxLayout justifyContent="space-between" alignItems="flex-start" width="400" class="list-group-item">
                             <Label :text="task.item" />
-                        </StackLayout>
+                            <Label text="X" class="delete" @tap="deleteNote(task.id)"/>
+                        </FlexboxLayout>
                     </v-template>
                 </ListView>
             </GridLayout>
@@ -24,7 +25,20 @@
                 items: []
             };
         },
-        mounted() {
+        methods: {
+          deleteNote(id) {
+            axios({
+                method: "POST",
+                url: `http://3.95.16.183/api/delete/${id}`,
+                headers: {
+                    Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8zLjk1LjE2LjE4M1wvYXBpXC9yZWdpc3RlciIsImlhdCI6MTU4MDQwMDY5MSwibmJmIjoxNTgwNDAwNjkxLCJqdGkiOiJicVpNV01xRzFURDIyeEpSIiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.unZ6PzRysmjGJXUtJmdp8XkYv6gPeFYGn8gizEXkWwM"
+                }
+            }).then(result => {
+                console.log(result.data)
+                this.$navigator.navigate("/home");
+            });
+          },
+          load() {
             axios({
                 method: "GET",
                 url: "http://3.95.16.183/api/listing",
@@ -34,6 +48,10 @@
             }).then(result => {
                 this.items = result.data;
             });
+          }
+        },
+        mounted() {
+          this.load()
         }
     };
 </script>

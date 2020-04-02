@@ -2,6 +2,8 @@
     <GridLayout rows="auto" columns="*, *, *" class="nav">
         <Button class="nav-btn" text='View' @tap="goTo('/home')" row="1"
             col="0" />
+        <Button class="nav-btn" text='Map' @tap="goTo('/map')" row="1"
+                col="1" />
         <Button class="nav-btn" text='Add' @tap="goTo('/add')" row="1"
             col="2" />
     </GridLayout>

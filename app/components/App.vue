@@ -9,7 +9,7 @@
 
 <script>
     import nav from "./Nav";
-    const appSettings = require("tns-core-modules/application-settings"); 
+    const appSettings = require("tns-core-modules/application-settings");
 
     export default {
         components: {
@@ -19,9 +19,9 @@
             return {};
         },
         mounted() {
-            console.log(this.$store.state.count);
+            //console.log(this.$store.state.count);
             const username = appSettings.getString("username");
-            console.log(username);
+            //console.log(username);
         }
     };
 </script>

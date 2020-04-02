@@ -1,10 +1,10 @@
 {
-    "description": "NativeScript Application",
-    "license": "SEE LICENSE IN <your-license-filename>",
-    "readme": "NativeScript Application",
-    "repository": "<fill-your-repository-here>",
+    "description": "Listo",
+    "license": "SEE LICENSE IN README.md",
+    "readme": "Public Messaging",
+    "repository": "https://github.com/johnlewissims/listo",
     "nativescript": {
-        "id": "org.nativescript.playvue",
+        "id": "org.johnlewissims.listo",
         "tns-android": {
             "version": "6.3.0"
         },
@@ -40,6 +40,7 @@
     "devDependencies": {
         "@babel/core": "7.7.5",
         "@babel/preset-env": "^7.0.0",
+        "axios": "^0.19.2",
         "babel-loader": "^8.0.2",
         "babel-traverse": "6.26.0",
         "babel-types": "6.26.0",
@@ -55,11 +56,12 @@
         "nativescript-worker-loader": "~0.9.0",
         "node-sass": "^4.9.2",
         "sass-loader": "^7.1.0",
+        "terser-webpack-plugin": "^2.3.5",
+        "tns-platform-declarations": "6.3.1",
         "uglifyjs-webpack-plugin": "~1.2.7",
         "vue-loader": "^15.2.6",
         "webpack": "^4.16.4",
         "webpack-bundle-analyzer": "~2.13.1",
-        "webpack-cli": "^3.1.0",
-        "tns-platform-declarations": "6.3.1"
+        "webpack-cli": "^3.1.0"
     }
 }

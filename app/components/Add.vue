@@ -28,7 +28,7 @@
         },
         methods: {
             submit() {
-                console.log(this.message);
+                //console.log(this.message);
                 axios({
                         method: "POST",
                         url: "http://3.95.16.183/api/listing",
@@ -41,7 +41,7 @@
                     })
                     .then(result => {
                         this.$navigator.navigate("/home");
-                        console.log("test");
+                        //console.log("test");
                     })
                     .catch(function(error) {
                         console.log(error);

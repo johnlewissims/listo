@@ -20,6 +20,7 @@
 
 <script>
     import axios from "../axios";
+    import Home from '../components/Home'
     export default {
         data() {
             return {
@@ -40,7 +41,7 @@
                         }
                     })
                     .then(result => {
-                        this.$navigator.navigate("/home");
+                        this.$navigator.$navigateTo(Home, {transition:{ name:'fade', duration: 200 }});
                         //console.log("test");
                     })
                     .catch(function(error) {

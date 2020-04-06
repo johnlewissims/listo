@@ -14,7 +14,8 @@
     export default {
         methods: {
             goTo(name) {
-                this.$navigator.navigate(name);
+                this.$navigator.navigate(name, {transition:{ name:'fade', duration: 200 }});
+                //this.$navigator.navigate(name);
             }
         }
     };

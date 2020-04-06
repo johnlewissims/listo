@@ -6,14 +6,14 @@
     "nativescript": {
         "id": "org.johnlewissims.listo",
         "tns-android": {
-            "version": "6.3.0"
+            "version": "6.3.1"
         },
         "tns-ios": {
             "version": "6.3.0"
         }
     },
     "dependencies": {
-        "@nativescript/core": "6.3.1",
+        "@nativescript/core": "~6.3.0",
         "@nativescript/theme": "2.2.1",
         "@progress-nativechat/nativescript-nativechat": "3.0.0",
         "kinvey-nativescript-sdk": "4.2.5",
@@ -35,7 +35,7 @@
         "nativescript-ui-listview": "8.0.1",
         "nativescript-ui-sidedrawer": "8.0.0",
         "nativescript-vue": "2.4.0",
-        "tns-core-modules": "6.3.1"
+        "tns-core-modules": "~6.3.0"
     },
     "devDependencies": {
         "@babel/core": "7.7.5",
@@ -51,7 +51,7 @@
         "css-loader": "^1.0.0",
         "lazy": "1.0.11",
         "mini-css-extract-plugin": "^0.4.1",
-        "nativescript-dev-webpack": "1.4.0",
+        "nativescript-dev-webpack": "~1.4.0",
         "nativescript-vue-template-compiler": "^2.0.0-alpha.3",
         "nativescript-worker-loader": "~0.9.0",
         "node-sass": "^4.9.2",

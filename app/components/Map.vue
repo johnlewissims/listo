@@ -1,5 +1,5 @@
 <template>
-    <Page class="map">
+    <Page class="map" actionBarHidden="true">
       <Label text="Test" class="heading" />
     </Page>
 </template>

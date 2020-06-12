@@ -1,5 +1,5 @@
 <template>
-    <Page class="add">
+    <Page class="add" actionBarHidden="true">
         <FlexboxLayout class="page">
             <StackLayout class="form">
                 <Label text="Post a Message" class="heading" />

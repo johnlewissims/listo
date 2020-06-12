@@ -1,7 +1,7 @@
 <template>
-    <Page class="home">
+    <Page class="home" actionBarHidden="true">
         <FlexboxLayout flexDirection="column" class="home-1">
-            <Label :text="title" class="heading" />
+            <Label :text="title" class="heading" height="100"/>
             <GridLayout class="home-2">
                 <ListView for="task in items" class="board">
                     <v-template>

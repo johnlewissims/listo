@@ -19,7 +19,7 @@
 </template>
 
 <script>
-    import axios from "../axios";
+    import axios from "axios";
     import Home from '../components/Home'
     export default {
         data() {
@@ -29,24 +29,22 @@
         },
         methods: {
             submit() {
-                //console.log(this.message);
                 axios({
-                        method: "POST",
-                        url: "http://3.95.16.183/api/listing",
-                        headers: {
-                            Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8zLjk1LjE2LjE4M1wvYXBpXC9yZWdpc3RlciIsImlhdCI6MTU4MDQwMDY5MSwibmJmIjoxNTgwNDAwNjkxLCJqdGkiOiJicVpNV01xRzFURDIyeEpSIiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.unZ6PzRysmjGJXUtJmdp8XkYv6gPeFYGn8gizEXkWwM"
-                        },
-                        data: {
-                            item: this.message
-                        }
-                    })
-                    .then(result => {
-                        this.$navigator.$navigateTo(Home, {transition:{ name:'fade', duration: 200 }});
-                        //console.log("test");
-                    })
-                    .catch(function(error) {
-                        console.log(error);
-                    });
+                  method: "POST",
+                  url: "http://3.95.16.183/api/listing",
+                  headers: {
+                      Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8zLjk1LjE2LjE4M1wvYXBpXC9yZWdpc3RlciIsImlhdCI6MTU4MDQwMDY5MSwibmJmIjoxNTgwNDAwNjkxLCJqdGkiOiJicVpNV01xRzFURDIyeEpSIiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.unZ6PzRysmjGJXUtJmdp8XkYv6gPeFYGn8gizEXkWwM"
+                  },
+                  data: {
+                      item: this.message
+                  }
+              })
+              .then(result => {
+                  this.$navigator.navigate('/home', {transition:{ name:'fade', duration: 200 }});
+              })
+              .catch(function(error) {
+                  console.log(error);
+              });
             }
         }
     };

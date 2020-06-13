@@ -36,9 +36,11 @@
         "nativescript-ui-listview": "8.0.1",
         "nativescript-ui-sidedrawer": "8.0.0",
         "nativescript-vue": "2.4.0",
+        "nativescript-vue-navigator": "^1.2.0",
         "tns-android": "^6.5.1",
         "tns-core-modules": "^6.5.5",
-        "tns-ios": "^6.5.1"
+        "tns-ios": "^6.5.1",
+        "vuex": "^3.4.0"
     },
     "devDependencies": {
         "@babel/core": "7.7.5",

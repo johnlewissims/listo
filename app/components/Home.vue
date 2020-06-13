@@ -18,7 +18,7 @@
 
 <script>
     import Home from '../components/Home'
-    import axios from "../axios";
+    import axios from "axios";
     export default {
         data() {
             return {
@@ -35,8 +35,8 @@
                     Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8zLjk1LjE2LjE4M1wvYXBpXC9yZWdpc3RlciIsImlhdCI6MTU4MDQwMDY5MSwibmJmIjoxNTgwNDAwNjkxLCJqdGkiOiJicVpNV01xRzFURDIyeEpSIiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.unZ6PzRysmjGJXUtJmdp8XkYv6gPeFYGn8gizEXkWwM"
                 }
             }).then(result => {
-                console.log(result.data)
-                this.$navigateTo(Home, {transition:{ name:'fade', duration: 200 }});
+                console.log(this.$navigator)
+                this.$navigator.navigate('/home', {transition:{ name:'fade', duration: 200 }});
             });
           },
           load() {
@@ -53,6 +53,14 @@
         },
         mounted() {
           this.load()
+
+          // Example of Using Store to Commit and Log //
+          //console.log(this.$store.state.count)
+          //this.$store.commit('increment')
+
+          // Example of Using AppSettings //
+          // const appSettings = require("tns-core-modules/application-settings");
+          // console.log(appSettings.getString("username"));
         }
     };
 </script>
